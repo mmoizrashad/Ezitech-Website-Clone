@@ -1,0 +1,797 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.top-header {
+    background-color: rgb(50, 117, 219); /* Sky blue */
+    color: white;
+    padding: 6px 0;
+    font-size: 12px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-left: 200px;
+}
+
+.contact-info span {
+    margin-right: 20px;
+}
+
+.auth-links {
+    display: flex;
+    text-align: center;
+    
+}
+
+.auth-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.login{
+    
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    
+}
+.register{
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    margin-right: 100px;
+}
+.auth-links .separator {
+    margin: 0 5px;
+}
+
+.auth-links i, .contact-info i {
+    margin-right: 5px;
+}
+
+.social-icon {
+    margin-left: 0px;
+    margin-right: 100px;
+    
+}
+
+.social-icon i {
+    
+    font-size: 13px;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    border-bottom: 1px solid white;
+    padding: 10px 0;
+    position: relative;
+    z-index: 100;
+    margin-top: -200px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+    color: #007bff; /* Text color changes to blue on hover */
+}
+
+.nav-menu li.active a {
+    position: relative;
+    color: #007bff; /* Active link color */
+}
+
+.nav-menu li.active a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    height: 2px;
+    background-color: #007bff; /* Blue underline for the active menu item */
+    border-radius: 2px;
+}
+
+.separator {
+    color: #ddd;
+    font-weight: normal;
+}
+
+.icon {
+    color: white;
+    cursor: pointer;
+}
+
+.icon.search-box {
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.icon.search-box i {
+    margin: 0;
+}
+
+/* Main Header Section Styles */
+.main-header {
+    background-image: url('/pic/main.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Makes the background image fixed */
+    color: white;
+    text-align: center;
+    padding: 200px 0 100px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.main-header::after {
+    content: "";
+    background-color: rgba(4, 45, 137, 0.51);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    margin-top: 180px;
+}
+
+.header-content h1 {
+    font-size: 60px;
+    /* margin-bottom: 100px; */
+    text-align: center;
+    padding-right: 150px;
+    padding-left: 50px;
+    
+}
+
+
+
+.highlight {
+    position: absolute;
+    opacity: 0;
+    animation: fadeInOut 9s linear infinite;
+    color:rgb(50, 117, 219);
+}
+
+/* Timing for each word to appear and disappear */
+.highlight:nth-child(1) {
+    animation-delay: 1s;
+}
+
+/* Keyframes for fading effect */
+@keyframes fadeInOut {
+    0%, 20% {
+        opacity: 0;
+    }
+    25%, 75% {
+        opacity: 1;
+    }
+    80%, 100% {
+        opacity: 0;
+    }
+}
+
+
+
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+
+
+/* Styles for the search input field */
+.search-courses {
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 30px;
+    
+    padding-right: 40px; /* Space for the icon */
+    outline: none;
+}
+
+/* Styles for the search icon inside the input field */
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ccc; /* Icon color */
+    font-size: 16px;
+    pointer-events: none; /* Ensure the icon does not block input field actions */
+}
+.header-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.images-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Adjust space between images */
+    margin-top: 20px;
+}
+
+.images-container img {
+    width: 200px; /* Adjust size of images */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Adjust image to fit container */
+}
+
+/* main */
+.intro {
+    text-align: center;
+    padding: 20px;
+    font-size: 25px;
+}
+
+.illustration {
+    text-align: center;
+    padding: 20px;
+}
+
+.illustration img {
+    max-width: 30%;
+    height: 200px;
+}
+.animate-slide-up {
+    opacity: 0; /* Start with the image hidden */
+    transform: translateY(100%); /* Start below the view */
+    animation: slideUp 1s ease-in-out forwards; /* Trigger animation */
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.course {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition effect for hover */
+    height: 130px;
+}
+
+.course:hover {
+    transform: translateY(-5px); /* Moves the box up */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds a stronger shadow */
+}
+
+.course img {
+    width: 69px;
+    height: 69px;
+    object-fit: cover;
+    border-radius: 8px;
+
+}
+
+.course p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* main course */
+.bundles-info {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.bundles-info h2 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.bundles-info .note {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+.course-box-container {
+    display: flex; /* Align boxes side by side */
+    justify-content: space-between; /* Space between boxes */
+    gap: 20px; /* Space between the boxes */
+    
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.course-box {
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 50%; /* Adjust width to fit two boxes side by side */
+    box-sizing: border-box; /* Include padding and border in the box's total width */
+    
+    
+}
+
+.box-header {
+    background-color: #1e73be;
+    color: #fff;
+    padding: 40px;
+    padding-bottom: 20px;
+    
+    
+}
+
+.box-header h2 {
+    margin: 0;
+    font-size: 18px;
+    
+    
+}
+
+.box-header p {
+    margin: 5px 0 0;
+    margin-top: 40px;
+    
+    
+    font-size: 14px;
+    text-align: center;
+}
+
+.course-list {
+    padding: 10px;
+    
+}
+
+.course-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.course-item:last-child {
+    border-bottom: none;
+}
+
+.course-item img {
+    width: 80px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.course-info {
+    flex: 1;
+}
+
+.course-info h4 {
+    margin: 0;
+    font-size: 13px;
+    color: #333;
+    text-align: left;
+    
+}
+
+.course-info .course-price {
+    font-size: 14px;
+    color: #1e73be;
+    text-align: right;
+}
+
+.total-price {
+    background-color: white;
+    padding: 10px 15px;
+    text-align: right;
+    border-top: 1px solid #ddd;
+    
+}
+
+.total-price p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.total-price .original-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 10px;
+}
+
+/* intership */
+.internship-section {
+    text-align: center;
+    margin: 50px 0;
+    padding-left: 100px;
+    padding-right: 100px;
+
+}
+
+.section-heading {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.int-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.int-course-box {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.int-course-box:hover {
+    transform: translateY(-10px); /* Move up by 10px */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.int-box-header {
+    position: relative;
+    height: 150px;
+    background-color: rgb(43, 93, 166); /* Background color */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    color: white;
+}
+
+.int-header-content {
+    z-index: 2;
+    padding: 10px;
+    text-align: left;
+}
+
+.int-header-content h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.int-header-content p {
+    margin: 0;
+    font-size: 17px;
+}
+
+.int-icon-image {
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+    margin-right: 10px;
+}
+
+.int-course-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.int-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.int-icon {
+    font-size: 20px;
+    color: rgb(43, 93, 166);
+}
+
+.int-read-more-button {
+    background-color: rgb(43, 93, 166);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.int-read-more-button:hover {
+    background-color: #2b5da6;
+}
+
+.int-read-more-btn,
+.load-more-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #1e73be;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.int-read-more-btn:hover,
+.load-more-btn:hover {
+    background-color: #155a9a;
+}
+
+.load-more-btn {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.heading-with-bg {
+    background-image: url('/pic/backgroundd.webp'); /* Replace with your image path */
+    background-size: cover; /* Cover the whole element */
+    background-position: center; /* Center the image */
+    color: white; /* Text color to ensure it's readable on the background */
+    padding: 20px; /* Adjust padding as needed */
+}
+
+.feature-section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.feature-image {
+    flex: 1;
+    text-align: center;
+}
+
+.large-image {
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.large-image:hover {
+    transform: scale(1.05);
+}
+
+.feature-content {
+    flex: 2;
+    max-width: 600px;
+}
+
+.feature-content h2 {
+    font-size: 60px;
+    margin-bottom: 10px;
+    color: #333;
+    margin-top: -200px;
+}
+.anytime{
+    color:rgb(37, 117, 237);
+}
+
+.feature-content p {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 20px;
+    padding-right: 200px;
+}
+
+.small-images {
+    display: flex;
+    gap: 10px;
+}
+
+.small-image {
+    width: 30%;
+    height: 10%;
+    
+    
+    
+    
+}
+
+/* foter */
+.site-footer {
+    background-color: rgb(13, 43, 112);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-heading h2 {
+    margin: 0;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.footer-image img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.footer-box {
+    max-width: 250px;
+}
+
+.footer-box h3 {
+    margin-bottom: 10px;
+    font-size: 30px;
+    text-align: left;
+}
+
+.footer-box p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 300px;
+    
+}
+
+.footer-social i {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.footer-social i:hover {
+    color: #ffdf00;
+    cursor: pointer;
+}
+.footer-box {
+    padding: 20px;
+}
+
+.popular-course {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.course-thumbnail {
+    width: 50px; /* Image size set karein */
+    height: 50px; /* Image size set karein */
+    margin-right: 10px;
+    object-fit: cover; /* Image ko proper fit karne ke liye */
+}
+.start{
+    color:rgb(37, 117, 237);
+}
+
+.footer-box {
+    padding: 20px;
+}
+
+.pages-list {
+    /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    text-align: left;
+}
+
+.pages-list li {
+    margin-bottom: 10px; /* Space between items */
+}
+
+.pages-list li a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.pages-list li a:hover {
+    color: blue; /* Change text color to blue on hover */
+}
+.footer-box {
+    padding: 20px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: blue; /* Set icon color to blue */
+}
